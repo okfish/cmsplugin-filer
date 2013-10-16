@@ -1,4 +1,5 @@
 {% load thumbnail filer_tags filer_image_tags %}{% spaceless %}
+
 {% comment %}
 	You may change the image size for special cases in your project by overriding
 	this template. There are a few size manipulation filters for this in
@@ -12,7 +13,7 @@
 	{% if link %}<a href="{{ link }}"{% if instance.target_blank %} target="_blank"{% endif %}>{% endif %}<img{% if instance.alignment %} class="{{ instance.alignment }}"{% endif %} alt="{% if instance.alt %}{{ instance.alt }}{% endif %}" src="{{ thumbnail.url }}"{% if instance.caption %} title="{{ instance.caption }}"{% endif %} />{% if link %}</a>{% endif %}
 {% endcomment %}
 
-{% if link %}<a href="{{ link }}"{% if instance.target_blank %} target="_blank"{% endif %} class="filer_image_link">{% endif %}
+{% if link %}<a href="{{ link }}"{% if instance.target_blank %} target="_blank"{% endif %} {% if instance.use_lightbox %} data-lightbox="{% if instance.link_data_lightbox %}{{ instance.link_data_lightbox }}{% else %}lightbox-image-{{ instance.pk }}{% endif %}"{% endif %} class="filer_image_link">{% endif %}
 {% if instance.image %}
 	{% if instance.use_original_image %}
 		<img class="filer_image {% if instance.alignment %}{{ instance.alignment }}{% endif %}" alt="{% if instance.alt %}{{ instance.alt }}{% endif %}" src="{{ instance.image.url }}"{% if instance.width %} width="{{ instance.width }}"{% endif %}{% if instance.height %} height="{{ instance.height }}"{% endif %}{% if instance.caption %} title="{{ instance.caption }}"{% endif %} />
