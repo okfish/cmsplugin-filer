@@ -42,8 +42,11 @@ class FilerImage(CMSPlugin):
     file_link = FilerFileField(null=True, blank=True, default=None, verbose_name=_("file link"), help_text=_("if present image will be clickable"), related_name='+')
     original_link = models.BooleanField(_("link original image"), default=False, help_text=_("if present image will be clickable"))
     description = models.TextField(_("description"), blank=True, null=True)
-    target_blank = models.BooleanField(_('Open link in new window'), default=False)
+    target_blank = models.BooleanField(_('Open link in new window'), default=False, help_text=_("if present image will be opened in the new browser window"))
 
+    #Lightbox2 related fields
+    use_lightbox = models.BooleanField(_('Open link in the Lightbox'), default=False, help_text=_("use lightbox to view images (check Link to original image)"))
+    link_data_lightbox = models.CharField(_("Lightbox link ID"), null=True, blank=True, max_length=60, help_text=_("To group related images within the lightbox on the page fill this field with the same value for each image. To view image individually left this field blank."))
     # we only add the image to select_related. page_link and file_link are FKs
     # as well, but they are not used often enough to warrant the impact of two
     # additional LEFT OUTER JOINs.

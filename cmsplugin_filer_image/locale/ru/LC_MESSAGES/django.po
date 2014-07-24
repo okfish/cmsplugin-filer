@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 #   <neoascetic@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: cmsplugin-filer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-09 18:33+0100\n"
+"POT-Creation-Date: 2013-10-16 09:31+0400\n"
 "PO-Revision-Date: 2012-09-11 09:55+0000\n"
 "Last-Translator: Pavel Puchkin <neoascetic@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/cmsplugin-filer/"
@@ -32,105 +32,131 @@ msgstr "Опции изменения размеров изображения"
 msgid "More"
 msgstr "Больше"
 
-#: models.py:18
+#: models.py:15
 msgid "left"
 msgstr "лево"
 
-#: models.py:19
+#: models.py:16
 msgid "right"
 msgstr "право"
 
-#: models.py:21
+#: models.py:18
 msgid "caption text"
 msgstr "текст заголовка"
 
-#: models.py:22
+#: models.py:19
 msgid "image"
 msgstr "изображение"
 
-#: models.py:24 models.py:26
+#: models.py:21 models.py:23
 msgid "alternative image url"
 msgstr "альтернативная ссылка на изображение"
 
-#: models.py:27
+#: models.py:24
 msgid "alt text"
 msgstr "альтернативный текст"
 
-#: models.py:28
+#: models.py:25
 #, fuzzy
 msgid "use the original image"
 msgstr "ссылка на оригинальное изображение"
 
-#: models.py:29
+#: models.py:26
 msgid "do not resize the image. use the original image instead."
-msgstr ""
+msgstr "не менять размеры изображения, использовать только оригинальную картинку"
 
-#: models.py:30 models.py:114
+#: models.py:27 models.py:114
 msgid "thumbnail option"
 msgstr "опция миниатюры"
 
-#: models.py:31
+#: models.py:28
 msgid ""
 "overrides width, height, crop and upscale with values from the selected "
 "thumbnail option"
-msgstr ""
+msgstr "переписывает ширину, высоту, обрезку и увеличение значениями из выбранной опции миниатюры"
 
-#: models.py:32
+#: models.py:29
 msgid "use automatic scaling"
 msgstr "использовать автоматическое масштабирование"
 
-#: models.py:33
+#: models.py:30
 msgid "tries to auto scale the image based on the placeholder context"
 msgstr "попытка масштабировать изображение, основываясь на контексте слота"
 
-#: models.py:34 models.py:107
+#: models.py:31 models.py:107
 msgid "width"
 msgstr "ширина"
 
-#: models.py:35 models.py:108
+#: models.py:32 models.py:108
 msgid "height"
 msgstr "высота"
 
-#: models.py:36 models.py:109
+#: models.py:33 models.py:109
 msgid "crop"
 msgstr "обрезать"
 
-#: models.py:37 models.py:110
+#: models.py:34 models.py:110
 msgid "upscale"
 msgstr "увеличивать"
 
-#: models.py:38
+#: models.py:35
 msgid "image alignment"
 msgstr "выравнивание изображения"
 
-#: models.py:40
+#: models.py:37
 msgid "link"
 msgstr "ссылка"
 
-#: models.py:41 models.py:43 models.py:45 models.py:46
+#: models.py:38 models.py:40 models.py:42 models.py:43
 msgid "if present image will be clickable"
 msgstr "если установлено, изображение будет кликабельным"
 
-#: models.py:44
+#: models.py:41
 msgid "page link"
 msgstr "ссылка на страницу"
 
-#: models.py:45
+#: models.py:42
 msgid "file link"
 msgstr "ссылка на файл"
 
-#: models.py:46
+#: models.py:43
 msgid "link original image"
 msgstr "ссылка на оригинальное изображение"
 
-#: models.py:47
+#: models.py:44
 msgid "description"
 msgstr "описание"
 
-#: models.py:48
+#: models.py:45
 msgid "Open link in new window"
-msgstr ""
+msgstr "Открывать ссылку в новом окне"
 
+#: models.py:45
+#, fuzzy
+msgid "if present image will be opened in the new browser window"
+msgstr "если установлено, изображение будет кликабельным"
+
+#: models.py:48
+msgid "Open link in the Lightbox"
+msgstr "Открывать ссылку в Лайтбоксе"
+
+#: models.py:48
+msgid "use lightbox to view images (check Link to original image)"
+msgstr "использовать Лайтбокс (Lightbox2) для просмотра изображений "
+"(должна быть установлена опция Ссылка на оригинальное изображение)"
+
+#: models.py:49
+msgid "Lightbox link ID"
+msgstr "ID ссылки Лайтбокса (data-lightbox)"
+
+#: models.py:49
+msgid ""
+"To group related images within the lightbox on the page fill this field with "
+"the same value for each image. To view image individually left this field "
+"blank."
+msgstr "Для показа нескольких картинок внутри одного Лайтбокса это поле должно"
+" содержать одинаковое значение для каждого изображения в группе."
+" Чтобы показывать по одной картинке в лайтбоксе, оставьте это поле пустым"
 #: models.py:57
 msgid "filer image"
 msgstr "изображение (filer)"
